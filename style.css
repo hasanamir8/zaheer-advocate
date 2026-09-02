@@ -1,27 +1,423 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Zaheer Rizvi Advocate | Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
-<nav><div class="container nav-inner"><div class="logo"><div class="logo-icon">ZR</div>ZAHEER RIZVI<span>ADVOCATE</span></div>
-<div class="nav-links"><a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Practice</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
-<a class="btn" href="tel:+919335200748">+91-9335200748</a></div></nav>
-<section class="hero"><div class="container hero-grid">
-<div data-aos="fade-right"><div class="label">Shahjahanpur • 20+ Years</div>
-<h1>Defending Rights With <i>Integrity & Excellence</i></h1>
-<p>Zaheer Rizvi — Criminal, Civil & Family Court advocate. 500+ cases, transparent fees, direct consultation. Your trusted legal shield in Uttar Pradesh.</p>
-<div class="hero-btns"><a class="btn" href="contact.html">Book Consultation</a><a class="btn-outline" href="services.html">Practice Areas</a></div>
-<div class="stats"><div><b>500+</b><span>Cases Won</span></div><div><b>10+</b><span>Years</span></div><div><b>1000+</b><span>Clients</span></div></div>
-</div>
-<div class="hero-3d" data-aos="zoom-in"><div class="card-3d"><img src="photo_1.jpg" alt="Advocate"><div class="float-badge">⚖️ Bail Granted in 24hrs</div><div class="float-badge2">📜 Registry Verified</div></div></div>
-</div></section>
-<section><div class="container"><div class="label">Practice Areas</div><div class="title">Expertise That <span>Wins Cases</span></div>
-<div class="grid3">
-<div class="card" data-aos="flip-left"><div class="icon">⚖️</div><h3>Criminal Law</h3><p>Bail, anticipatory bail, 498A, NDPS, trial & appeals. Fast relief.</p><a href="services.html">Explore →</a></div>
-<div class="card" data-aos="flip-left" data-aos-delay="150"><div class="icon">📜</div><h3>Civil Litigation</h3><p>Property, partition, injunction, recovery, registry verification.</p><a href="services.html">Explore →</a></div>
-<div class="card" data-aos="flip-left" data-aos-delay="300"><div class="icon">👨‍👩‍👧</div><h3>Family Court</h3><p>Divorce, maintenance, custody, domestic violence with sensitivity.</p><a href="services.html">Explore →</a></div>
-</div></div></section>
-<footer>© 2026 ZAHEER RIZVI ADVOCATE • hasanamir8.github.io/zaheer-advocate</footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="script.js"></script>
-</body></html>
+:root {
+    --gold: #c9a86a;
+    --gold2: #f3e5c3;
+    --black: #080808;
+    --card: #141414;
+    --white: #fff
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter;
+    background: var(--black);
+    color: #fff;
+    overflow-x: hidden
+}
+
+h1,
+h2,
+h3 {
+    font-family: Cormorant Garamond
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 24px
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: rgba(8, 8, 8, .92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(201, 168, 106, .18)
+}
+
+.nav-inner {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-weight: 800;
+    font-size: 20px
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #c9a86a, #e8d5a8);
+    color: #000;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    font-family: Cormorant Garamond;
+    font-size: 22px
+}
+
+.logo span {
+    color: var(--gold);
+    font-weight: 400;
+    margin-left: 6px;
+    font-size: 12px;
+    letter-spacing: 2px
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8a8a8a
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold)
+}
+
+.btn {
+    background: linear-gradient(135deg, var(--gold), #a6864a);
+    color: #000;
+    padding: 13px 26px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(201, 168, 106, .3)
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, .2);
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block
+}
+
+.hero {
+    min-height: 100vh;
+    padding-top: 76px;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(700px at 75% 15%, rgba(201, 168, 106, .15), transparent), linear-gradient(180deg, #111, #080808)
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 48px;
+    align-items: center
+}
+
+.label {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px
+}
+
+.title {
+    font-size: 48px;
+    line-height: 1.05
+}
+
+.title span {
+    color: var(--gold);
+    font-style: italic
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: .95;
+    margin: 14px 0 18px
+}
+
+.hero h1 i {
+    color: var(--gold);
+    font-style: italic
+}
+
+.hero p {
+    color: #9a9a9a;
+    line-height: 1.8;
+    max-width: 520px
+}
+
+.hero-btns {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px
+}
+
+.stats {
+    display: flex;
+    gap: 28px;
+    margin-top: 32px
+}
+
+.stats b {
+    font-family: Cormorant Garamond;
+    font-size: 28px;
+    color: var(--gold);
+    display: block
+}
+
+.stats span {
+    font-size: 10px;
+    color: #777;
+    letter-spacing: 1px;
+    text-transform: uppercase
+}
+
+.hero-3d {
+    perspective: 1000px
+}
+
+.card-3d {
+    position: relative;
+    background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
+    border: 1px solid rgba(201, 168, 106, .25);
+    border-radius: 20px;
+    padding: 18px;
+    transform: rotateY(-8deg) rotateX(6deg);
+    transition: .6s;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .6)
+}
+
+.card-3d:hover {
+    transform: rotateY(0) rotateX(0) scale(1.02)
+}
+
+.card-3d img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 14px
+}
+
+.float-badge {
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+    animation: float 3s infinite
+}
+
+.float-badge2 {
+    position: absolute;
+    bottom: 40px;
+    right: -18px;
+    background: linear-gradient(135deg, var(--gold), #a6864a);
+    color: #000;
+    padding: 10px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    animation: float 3s .5s infinite
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+}
+
+section {
+    padding: 88px 0;
+    border-top: 1px solid rgba(255, 255, 255, .06)
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 44px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 16px;
+    padding: 28px;
+    transition: .4s;
+    position: relative;
+    overflow: hidden
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(201, 168, 106, .35)
+}
+
+.card .icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(201, 168, 106, .12);
+    border: 1px solid rgba(201, 168, 106, .2);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    color: var(--gold)
+}
+
+.card h3 {
+    margin: 16px 0 8px;
+    font-size: 22px
+}
+
+.card p {
+    color: #888;
+    font-size: 13.5px;
+    line-height: 1.6
+}
+
+.card a {
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 14px;
+    display: inline-block;
+    letter-spacing: 1px
+}
+
+.mini-card {
+    background: #101010;
+    border: 1px solid rgba(201, 168, 106, .15);
+    border-radius: 12px;
+    padding: 18px;
+    font-size: 13px;
+    color: #aaa
+}
+
+.mini-card b {
+    color: #fff;
+    font-size: 14px
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(201, 168, 106, .18);
+    transition: .4s
+}
+
+.gallery img:hover {
+    transform: scale(1.05) rotate(1deg)
+}
+
+.para {
+    color: #9a9a9a;
+    line-height: 1.8;
+    margin-top: 14px;
+    font-size: 14px
+}
+
+.check {
+    list-style: none;
+    color: #aaa;
+    line-height: 2.4;
+    margin-top: 16px;
+    font-size: 14px
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px
+}
+
+.form-box {
+    background: #111;
+    border: 1px solid rgba(201, 168, 106, .2);
+    border-radius: 16px;
+    padding: 28px
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    background: #0c0c0c;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 8px;
+    padding: 14px;
+    color: #fff;
+    margin-bottom: 14px;
+    font-family: Inter
+}
+
+footer {
+    padding: 36px 0;
+    text-align: center;
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255, 255, 255, .06)
+}
+
+@media(max-width:900px) {
+
+    .hero-grid,
+    .grid3,
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .hero h1 {
+        font-size: 38px
+    }
+
+    .nav-links {
+        display: none
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr
+    }
+}
