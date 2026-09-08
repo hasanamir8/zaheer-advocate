@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zaheer Rizvi | Advocate | Shahjahanpur</title>
+<title>Zaheer Rizvi | Advocate | Lucknow</title>
 
-<meta name="description" content="Zaheer Rizvi Advocate provides professional legal assistance and representation in Criminal, Civil and Family Law matters in Shahjahanpur.">
+<meta name="description" content="Zaheer Rizvi Advocate provides professional legal assistance and representation in Criminal, Civil and Family Law matters in Lucknow.">
 
 <meta name="theme-color" content="#0b1726">
 
-<!-- Font Awesome Icons -->
+<!-- Font Awesome -->
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -138,7 +139,7 @@ header{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:27px;
+    gap:24px;
 }
 
 .nav-links a{
@@ -216,7 +217,7 @@ header{
 ========================================= */
 
 .hero{
-    /* min-height:100vh;
+    min-height:100vh;
     position:relative;
     display:flex;
     align-items:center;
@@ -224,12 +225,7 @@ header{
         linear-gradient(rgba(7,17,29,.86),rgba(7,17,29,.92)),
         url("photo_1.jpeg") center/cover no-repeat;
     color:#fff;
-    padding-top:78px; */
-        min-height: 760px;
-    padding-top: 82px;
-    background: linear-gradient(90deg, rgba(10, 19, 35, .98) 0%, rgba(10, 19, 35, .93) 48%, rgba(10, 19, 35, .55) 100%), url(https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=85) center / cover;
-    display: flex;
-    align-items: center;
+    padding-top:78px;
 }
 
 .hero-content{
@@ -250,7 +246,6 @@ header{
     font-size:clamp(42px,6vw,76px);
     line-height:1.08;
     margin-bottom:25px;
-    color: #fff;
 }
 
 .hero h1 span{
@@ -640,11 +635,134 @@ section{
 
 
 /* =========================================
+   GALLERY
+========================================= */
+
+.gallery{
+    background:var(--light);
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    position:relative;
+    height:300px;
+    overflow:hidden;
+    cursor:pointer;
+    background:#ddd;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(7,17,29,.75),
+        rgba(7,17,29,0)
+    );
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    padding:20px;
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+}
+
+.gallery-item:hover .gallery-overlay{
+    opacity:1;
+}
+
+.gallery-overlay span{
+    font-family:Georgia,serif;
+    font-size:18px;
+}
+
+.gallery-overlay i{
+    color:var(--gold);
+    font-size:20px;
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+    padding:30px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:85vh;
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:absolute;
+    top:25px;
+    right:30px;
+    color:#fff;
+    font-size:35px;
+    cursor:pointer;
+    line-height:1;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    border:1px solid rgba(255,255,255,.5);
+    background:rgba(0,0,0,.3);
+    color:#fff;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.lightbox-prev{
+    left:25px;
+}
+
+.lightbox-next{
+    right:25px;
+}
+
+
+/* =========================================
    TESTIMONIAL
 ========================================= */
 
 .testimonial{
-    background:var(--light);
+    background:#fff;
 }
 
 .quote{
@@ -679,7 +797,7 @@ section{
 ========================================= */
 
 .faq{
-    background:#fff;
+    background:var(--light);
 }
 
 .faq-wrap{
@@ -939,7 +1057,7 @@ footer{
 
 .footer-contact{
     display:grid;
-    gap:8px;
+    gap:10px;
 }
 
 .footer-contact a,
@@ -999,7 +1117,7 @@ footer{
 @media(max-width:1100px){
 
     .nav-links{
-        gap:17px;
+        gap:15px;
     }
 
     .nav-phone{
@@ -1023,6 +1141,10 @@ footer{
     }
 
     .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -1122,6 +1244,15 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .gallery-item{
+        height:220px;
+    }
+
     .form-row{
         grid-template-columns:1fr;
     }
@@ -1187,6 +1318,14 @@ footer{
 
     .process-grid{
         grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:280px;
     }
 
     .form{
@@ -1255,6 +1394,10 @@ About
 
 <a href="#practice">
 Practice Areas
+</a>
+
+<a href="#gallery">
+Gallery
 </a>
 
 <a href="#why">
@@ -1327,7 +1470,7 @@ aria-label="Open menu"
 
 
 <div class="hero-kicker">
-Advocate • Shahjahanpur
+Advocate • Lucknow
 </div>
 
 
@@ -1583,25 +1726,11 @@ Legal assistance and representation in criminal matters.
 
 <ul>
 
-<li>
-Bail Matters
-</li>
-
-<li>
-FIR Related Matters
-</li>
-
-<li>
-Criminal Trials
-</li>
-
-<li>
-Criminal Appeals
-</li>
-
-<li>
-Police & Investigation Matters
-</li>
+<li>Bail Matters</li>
+<li>FIR Related Matters</li>
+<li>Criminal Trials</li>
+<li>Criminal Appeals</li>
+<li>Police & Investigation Matters</li>
 
 </ul>
 
@@ -1625,25 +1754,11 @@ Representation in civil disputes and legal proceedings.
 
 <ul>
 
-<li>
-Property Disputes
-</li>
-
-<li>
-Injunction Matters
-</li>
-
-<li>
-Recovery Matters
-</li>
-
-<li>
-Civil Proceedings
-</li>
-
-<li>
-Contractual Disputes
-</li>
+<li>Property Disputes</li>
+<li>Injunction Matters</li>
+<li>Recovery Matters</li>
+<li>Civil Proceedings</li>
+<li>Contractual Disputes</li>
 
 </ul>
 
@@ -1667,25 +1782,11 @@ Legal guidance and representation in family-related matters.
 
 <ul>
 
-<li>
-Divorce Matters
-</li>
-
-<li>
-Maintenance Matters
-</li>
-
-<li>
-Family Disputes
-</li>
-
-<li>
-Domestic Disputes
-</li>
-
-<li>
-Child Custody Matters
-</li>
+<li>Divorce Matters</li>
+<li>Maintenance Matters</li>
+<li>Family Disputes</li>
+<li>Domestic Disputes</li>
+<li>Child Custody Matters</li>
 
 </ul>
 
@@ -1697,6 +1798,246 @@ Child Custody Matters
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     GALLERY
+========================================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+
+<div class="section-heading center">
+
+<div class="eyebrow">
+Gallery
+</div>
+
+<h2>
+Professional Practice
+</h2>
+
+<p>
+A glimpse into the professional environment and legal practice.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<!-- Gallery Image 1 -->
+
+<div
+class="gallery-item"
+onclick="openLightbox(0)"
+>
+
+<img
+src="photo_1.jpeg"
+alt="Zaheer Rizvi Advocate"
+>
+
+<div class="gallery-overlay">
+
+<span>
+Zaheer Rizvi
+</span>
+
+<i class="fa-solid fa-expand"></i>
+
+</div>
+
+</div>
+
+
+<!-- Gallery Image 2 -->
+
+<div
+class="gallery-item"
+onclick="openLightbox(1)"
+>
+
+<img
+src="photo_2.jpeg"
+alt="Legal Practice"
+onerror="this.src='photo_1.jpeg'"
+>
+
+<div class="gallery-overlay">
+
+<span>
+Legal Practice
+</span>
+
+<i class="fa-solid fa-expand"></i>
+
+</div>
+
+</div>
+
+
+<!-- Gallery Image 3 -->
+
+<div
+class="gallery-item"
+onclick="openLightbox(2)"
+>
+
+<img
+src="photo_3.jpeg"
+alt="Professional Legal Services"
+onerror="this.src='photo_1.jpeg'"
+>
+
+<div class="gallery-overlay">
+
+<span>
+Professional Services
+</span>
+
+<i class="fa-solid fa-expand"></i>
+
+</div>
+
+</div>
+
+
+<!-- Gallery Image 4 -->
+
+<div
+class="gallery-item"
+onclick="openLightbox(3)"
+>
+
+<img
+src="photo_4.jpeg"
+alt="Advocate Office"
+onerror="this.src='photo_1.jpeg'"
+>
+
+<div class="gallery-overlay">
+
+<span>
+Office
+</span>
+
+<i class="fa-solid fa-expand"></i>
+
+</div>
+
+</div>
+
+
+<!-- Gallery Image 5 -->
+
+<div
+class="gallery-item"
+onclick="openLightbox(4)"
+>
+
+<img
+src="photo_5.jpeg"
+alt="Legal Consultation"
+onerror="this.src='photo_1.jpeg'"
+>
+
+<div class="gallery-overlay">
+
+<span>
+Consultation
+</span>
+
+<i class="fa-solid fa-expand"></i>
+
+</div>
+
+</div>
+
+
+<!-- Gallery Image 6 -->
+
+<div
+class="gallery-item"
+onclick="openLightbox(5)"
+>
+
+<img
+src="photo_6.jpeg"
+alt="Professional Practice"
+onerror="this.src='photo_1.jpeg'"
+>
+
+<div class="gallery-overlay">
+
+<span>
+Professional Practice
+</span>
+
+<i class="fa-solid fa-expand"></i>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     LIGHTBOX
+========================================= -->
+
+<div
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox(event)"
+>
+
+<button
+class="lightbox-close"
+onclick="closeLightbox()"
+aria-label="Close"
+>
+&times;
+</button>
+
+
+<button
+class="lightbox-prev"
+onclick="changeGallery(-1,event)"
+aria-label="Previous"
+>
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+
+<img
+id="lightboxImage"
+src=""
+alt="Gallery Image"
+>
+
+
+<button
+class="lightbox-next"
+onclick="changeGallery(1,event)"
+aria-label="Next"
+>
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+
+</div>
 
 
 
@@ -2115,8 +2456,8 @@ How can I schedule a consultation?
 <div class="faq-answer">
 
 <p>
-You can call +91 93352 00748, contact through WhatsApp or submit the
-consultation form on this website.
+You can call +91 93352 00748, +91 97945 86254, contact through
+WhatsApp or submit the consultation form on this website.
 </p>
 
 </div>
@@ -2133,7 +2474,7 @@ consultation form on this website.
 
 
 <!-- =========================================
-     CONSULTATION / CONTACT
+     CONTACT / CONSULTATION
 ========================================= -->
 
 <section class="consultation" id="contact">
@@ -2191,6 +2532,28 @@ Phone
 <div class="contact-detail">
 
 <div>
+<i class="fa-solid fa-phone"></i>
+</div>
+
+<div>
+
+<strong>
+Alternate Phone
+</strong>
+
+<a href="tel:+919794586254">
++91 97945 86254
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-detail">
+
+<div>
 <i class="fa-brands fa-whatsapp"></i>
 </div>
 
@@ -2228,8 +2591,8 @@ Chat on WhatsApp
 Email
 </strong>
 
-<a href="mailto:hasan.amir8@gmail.com">
-hasan.amir8@gmail.com
+<a href="mailto:zaheer.rizvi1@gmail.com">
+zaheer.rizvi1@gmail.com
 </a>
 
 </div>
@@ -2251,7 +2614,7 @@ Location
 </strong>
 
 <span>
-Shahjahanpur, Uttar Pradesh
+Lucknow, Uttar Pradesh
 </span>
 
 </div>
@@ -2274,7 +2637,7 @@ Shahjahanpur, Uttar Pradesh
 
 <form
 class="form"
-action="https://formsubmit.co/hasan.amir8@gmail.com"
+action="https://formsubmit.co/zaheer.rizvi1@gmail.com"
 method="POST"
 >
 
@@ -2289,13 +2652,12 @@ Please provide a few details about your legal matter.
 </p>
 
 
-<!-- FormSubmit configuration -->
-
 <input
 type="hidden"
 name="_subject"
 value="New Consultation Request - Zaheer Rizvi Advocate"
 >
+
 
 <input
 type="hidden"
@@ -2303,11 +2665,13 @@ name="_captcha"
 value="false"
 >
 
+
 <input
 type="hidden"
 name="_template"
 value="table"
 >
+
 
 <input
 type="hidden"
@@ -2565,6 +2929,10 @@ About
 Practice Areas
 </a>
 
+<a href="#gallery">
+Gallery
+</a>
+
 <a href="#why">
 Why Choose Us
 </a>
@@ -2596,9 +2964,15 @@ Contact
 </a>
 
 
-<a href="mailto:hasan.amir8@gmail.com">
+<a href="tel:+919794586254">
+<i class="fa-solid fa-phone"></i>
+&nbsp; +91 97945 86254
+</a>
+
+
+<a href="mailto:zaheer.rizvi1@gmail.com">
 <i class="fa-solid fa-envelope"></i>
-&nbsp; hasan.amir8@gmail.com
+&nbsp; zaheer.rizvi1@gmail.com
 </a>
 
 
@@ -2615,8 +2989,10 @@ rel="noopener"
 
 
 <span>
+
 <i class="fa-solid fa-location-dot"></i>
-&nbsp; Shahjahanpur, Uttar Pradesh
+&nbsp; Lucknow, Uttar Pradesh
+
 </span>
 
 
@@ -2681,7 +3057,7 @@ function toggleMenu(){
 }
 
 
-/* Close mobile menu when clicking a link */
+/* Close menu after clicking */
 
 document.querySelectorAll(".nav-links a").forEach(function(link){
 
@@ -2726,6 +3102,132 @@ function toggleFaq(button){
 
 
 /* =========================================
+   GALLERY
+========================================= */
+
+const galleryImages = [
+
+    "photo_1.jpeg",
+    "photo_2.jpeg",
+    "photo_3.jpeg",
+    "photo_4.jpeg",
+    "photo_5.jpeg",
+    "photo_6.jpeg"
+
+];
+
+let currentGalleryIndex = 0;
+
+
+function openLightbox(index){
+
+    currentGalleryIndex = index;
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const image =
+        document.getElementById("lightboxImage");
+
+    image.src =
+        galleryImages[currentGalleryIndex];
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeLightbox(event){
+
+    if(
+        event &&
+        event.target !== document.getElementById("lightbox")
+    ){
+        return;
+    }
+
+    document
+        .getElementById("lightbox")
+        .classList
+        .remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+function changeGallery(direction,event){
+
+    event.stopPropagation();
+
+    currentGalleryIndex += direction;
+
+
+    if(currentGalleryIndex < 0){
+
+        currentGalleryIndex =
+            galleryImages.length - 1;
+
+    }
+
+
+    if(
+        currentGalleryIndex >=
+        galleryImages.length
+    ){
+
+        currentGalleryIndex = 0;
+
+    }
+
+
+    document.getElementById("lightboxImage").src =
+        galleryImages[currentGalleryIndex];
+
+}
+
+
+/* Keyboard controls */
+
+document.addEventListener("keydown", function(event){
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+
+    if(!lightbox.classList.contains("active")){
+        return;
+    }
+
+
+    if(event.key === "Escape"){
+
+        lightbox.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    if(event.key === "ArrowRight"){
+
+        changeGallery(1,event);
+
+    }
+
+
+    if(event.key === "ArrowLeft"){
+
+        changeGallery(-1,event);
+
+    }
+
+});
+
+
+/* =========================================
    CURRENT YEAR
 ========================================= */
 
@@ -2737,3 +3239,4 @@ document.getElementById("year").textContent =
 
 </body>
 </html>
+```
