@@ -4,29 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zaheer Rizvi | Advocate | Criminal, Civil & Family Law</title>
+<title>Zaheer Rizvi | Advocate | Shahjahanpur</title>
 
-<meta name="description" content="Zaheer Rizvi Advocate provides legal representation and consultation in Criminal Law, Civil Litigation and Family Law matters.">
+<meta name="description" content="Zaheer Rizvi Advocate provides legal assistance and representation in Criminal, Civil and Family Law matters in Shahjahanpur.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0b1726">
 
 <style>
 
-:root{
-    --navy:#101c32;
-    --navy2:#172642;
-    --gold:#c9a45c;
-    --gold-light:#e4c987;
-    --cream:#f8f6f1;
-    --white:#ffffff;
-    --text:#252a32;
-    --muted:#687181;
-    --border:#e6e3dc;
-    --shadow:0 20px 60px rgba(16,28,50,.10);
-}
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
@@ -39,15 +27,10 @@ html{
 }
 
 body{
-    font-family:"DM Sans",sans-serif;
-    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    color:#182230;
     background:#fff;
     line-height:1.7;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
 }
 
 img{
@@ -55,31 +38,60 @@ img{
     display:block;
 }
 
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
 .container{
-    width:min(1180px,92%);
+    width:90%;
+    max-width:1180px;
     margin:auto;
+}
+
+/* =========================
+   COLORS
+========================= */
+
+:root{
+    --navy:#0b1726;
+    --navy2:#12243a;
+    --gold:#c9a45c;
+    --light:#f7f5f0;
+    --text:#182230;
+    --muted:#687384;
+    --white:#fff;
+    --border:#e5e7eb;
 }
 
 /* =========================
    HEADER
 ========================= */
 
-.header{
+header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:1000;
-    background:rgba(16,28,50,.96);
-    backdrop-filter:blur(12px);
+    z-index:999;
+    background:rgba(11,23,38,.96);
+    backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.nav{
-    height:82px;
+.navbar{
+    min-height:78px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:25px;
 }
 
 .logo{
@@ -90,55 +102,89 @@ img{
 }
 
 .logo-mark{
-    width:46px;
-    height:46px;
+    width:43px;
+    height:43px;
     border:1px solid var(--gold);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-family:"Playfair Display",serif;
-    font-size:18px;
     color:var(--gold);
+    font-size:21px;
+    font-weight:bold;
 }
 
 .logo-text strong{
     display:block;
-    font-family:"Playfair Display",serif;
-    font-size:18px;
-    letter-spacing:.5px;
+    font-size:17px;
+    letter-spacing:1.5px;
 }
+
 .logo-text span{
-    font-size:10px;
-    color:#bfc7d3;
+    font-size:11px;
     letter-spacing:2px;
+    color:#bfc7d2;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:32px;
-    color:#dfe4ec;
-    font-size:14px;
+    gap:28px;
 }
 
 .nav-links a{
-    transition:.25s;
+    color:#e9edf2;
+    font-size:14px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
-    color:var(--gold-light);
+    color:var(--gold);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .nav-phone{
-    padding:12px 18px;
-    border:1px solid rgba(201,164,92,.5);
-    color:var(--gold-light);
+    color:#fff;
+    font-size:13px;
+    white-space:nowrap;
 }
 
-.menu{
-    display:none;
+.nav-phone:hover{
+    color:var(--gold);
+}
+
+.nav-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:10px 15px;
+    border:1px solid #25D366;
     color:#fff;
-    font-size:28px;
+    font-size:13px;
+    border-radius:4px;
+    transition:.3s;
+    white-space:nowrap;
+}
+
+.nav-whatsapp:hover{
+    background:#25D366;
+    color:#fff;
+}
+
+.nav-whatsapp span{
+    font-size:13px;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:27px;
     cursor:pointer;
 }
 
@@ -147,48 +193,49 @@ img{
 ========================= */
 
 .hero{
-    min-height: 760px;
-    padding-top: 82px;
-    background: linear-gradient(90deg, rgba(10, 19, 35, .98) 0%, rgba(10, 19, 35, .93) 48%, rgba(10, 19, 35, .55) 100%), url(https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=85) center / cover;
-    display: flex;
-    align-items: center;
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(rgba(7,17,29,.86),rgba(7,17,29,.9)),
+        url("photo_1.jpeg") center/cover no-repeat;
+    color:#fff;
+    padding-top:78px;
 }
 
 .hero-content{
-    max-width:760px;
-    padding:100px 0;
-    color:#fff;
+    max-width:780px;
 }
 
-.eyebrow{
-    color:var(--gold-light);
+.hero-kicker{
+    color:var(--gold);
     text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:12px;
-    font-weight:700;
-    margin-bottom:22px;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(48px,6vw,78px);
-    line-height:1.04;
-    font-weight:600;
+    font-family:Georgia,serif;
+    font-size:clamp(42px,6vw,76px);
+    line-height:1.08;
     margin-bottom:25px;
 }
 
 .hero h1 span{
-    color:var(--gold-light);
+    color:var(--gold);
 }
 
 .hero p{
     max-width:650px;
+    color:#d7dde5;
     font-size:18px;
-    color:#d4dae3;
-    margin-bottom:35px;
+    margin-bottom:32px;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
     gap:14px;
     flex-wrap:wrap;
@@ -196,53 +243,36 @@ img{
 
 .btn{
     display:inline-flex;
-    align-items:center;
     justify-content:center;
-    padding:14px 24px;
+    align-items:center;
+    min-height:48px;
+    padding:0 24px;
+    border-radius:3px;
     font-size:14px;
-    font-weight:700;
-    transition:.25s;
+    font-weight:bold;
+    transition:.3s;
+    cursor:pointer;
+    border:none;
 }
 
 .btn-primary{
     background:var(--gold);
-    color:#101c32;
+    color:#111;
 }
 
 .btn-primary:hover{
-    background:var(--gold-light);
+    background:#e0bd73;
     transform:translateY(-2px);
 }
 
 .btn-outline{
-    border:1px solid rgba(255,255,255,.35);
+    border:1px solid rgba(255,255,255,.5);
     color:#fff;
 }
 
 .btn-outline:hover{
-    border-color:var(--gold);
-    color:var(--gold-light);
-}
-
-.hero-trust{
-    margin-top:55px;
-    display:flex;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.trust-item strong{
-    display:block;
-    font-family:"Playfair Display",serif;
-    font-size:30px;
-    color:#fff;
-}
-
-.trust-item span{
-    font-size:12px;
-    color:#aeb8c7;
-    text-transform:uppercase;
-    letter-spacing:1px;
+    background:#fff;
+    color:var(--navy);
 }
 
 /* =========================
@@ -250,65 +280,76 @@ img{
 ========================= */
 
 .intro-strip{
-    background:var(--gold);
-    color:var(--navy);
+    background:var(--navy2);
+    color:#fff;
 }
 
 .intro-grid{
     display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
 }
 
 .intro-item{
-    padding:26px 25px;
-    border-right:1px solid rgba(16,28,50,.15);
+    padding:25px 20px;
+    text-align:center;
+    border-right:1px solid rgba(255,255,255,.08);
 }
 
 .intro-item:last-child{
-    border:none;
+    border-right:none;
 }
 
 .intro-item strong{
     display:block;
-    font-size:16px;
-    margin-bottom:2px;
+    color:var(--gold);
+    font-size:24px;
+    font-family:Georgia,serif;
 }
 
 .intro-item span{
-    font-size:13px;
+    font-size:12px;
+    color:#c4ccd7;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
 /* =========================
-   SECTION
+   SECTIONS
 ========================= */
 
 section{
-    padding:100px 0;
+    padding:95px 0;
 }
 
-.section-head{
-    max-width:700px;
-    margin-bottom:55px;
+.section-heading{
+    max-width:680px;
+    margin-bottom:45px;
 }
 
-.section-label{
-    color:#a6813f;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:3px;
+.section-heading.center{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--gold);
     text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:bold;
     margin-bottom:12px;
 }
 
-.section-head h2{
-    font-family:"Playfair Display",serif;
+.section-heading h2{
+    font-family:Georgia,serif;
+    font-size:clamp(32px,4vw,48px);
     color:var(--navy);
-    font-size:clamp(35px,4vw,50px);
-    line-height:1.15;
-    margin-bottom:18px;
+    line-height:1.2;
+    margin-bottom:16px;
 }
 
-.section-head p{
+.section-heading p{
     color:var(--muted);
 }
 
@@ -317,59 +358,63 @@ section{
 ========================= */
 
 .about{
-    background:var(--cream);
+    background:#fff;
 }
 
 .about-grid{
     display:grid;
-    grid-template-columns:1fr 1.15fr;
-    gap:80px;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
     align-items:center;
 }
 
-.about-image{
+.about-images{
     position:relative;
+    min-height:500px;
 }
 
 .about-image-main{
-    min-height:570px;
-    background:
-        linear-gradient(rgba(16,28,50,.05),rgba(16,28,50,.15)),
-        url("photo_1.jpeg")
-        center/cover;
-}
-
-.experience-card{
     position:absolute;
-    right:-35px;
-    bottom:35px;
-    background:var(--navy);
-    color:#fff;
+    top:0;
+    left:0;
+    width:86%;
+    height:440px;
+    background:
+        linear-gradient(rgba(11,23,38,.1),rgba(11,23,38,.2)),
+        url("photo_1.jpeg") center/cover no-repeat;
+}
+
+.about-box{
+    position:absolute;
+    right:0;
+    bottom:0;
+    background:var(--gold);
+    color:#111;
+    width:230px;
     padding:28px;
-    width:190px;
-    box-shadow:var(--shadow);
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.experience-card strong{
+.about-box strong{
+    font-family:Georgia,serif;
     display:block;
-    font-family:"Playfair Display",serif;
-    color:var(--gold-light);
-    font-size:42px;
+    font-size:43px;
     line-height:1;
-    margin-bottom:8px;
 }
 
-.experience-card span{
-    font-size:12px;
+.about-box span{
+    display:block;
+    margin-top:8px;
+    font-size:13px;
+    font-weight:bold;
     text-transform:uppercase;
-    letter-spacing:1px;
 }
 
 .about-content h3{
-    font-family:"Playfair Display",serif;
-    color:var(--navy);
+    font-family:Georgia,serif;
     font-size:31px;
-    margin-bottom:18px;
+    color:var(--navy);
+    margin-bottom:20px;
 }
 
 .about-content p{
@@ -377,31 +422,23 @@ section{
     margin-bottom:18px;
 }
 
-.about-list{
-    margin:30px 0;
-    display:grid;
-    gap:14px;
+.signature{
+    margin-top:25px;
+    color:var(--navy);
 }
 
-.about-list li{
-    list-style:none;
-    display:flex;
-    gap:12px;
-    color:#3f4650;
-}
-
-.about-list li::before{
-    content:"✓";
-    color:#a6813f;
-    font-weight:bold;
+.signature strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:21px;
 }
 
 /* =========================
-   PRACTICE
+   PRACTICE AREAS
 ========================= */
 
 .practice{
-    background:#fff;
+    background:var(--light);
 }
 
 .practice-grid{
@@ -411,75 +448,54 @@ section{
 }
 
 .practice-card{
-    border:1px solid var(--border);
-    padding:36px 30px;
-    position:relative;
-    transition:.3s;
     background:#fff;
+    border:1px solid var(--border);
+    padding:32px;
+    transition:.3s;
+    position:relative;
 }
 
 .practice-card:hover{
-    transform:translateY(-7px);
-    box-shadow:var(--shadow);
-    border-color:#d7c39b;
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(15,23,42,.1);
 }
 
 .practice-number{
-    position:absolute;
-    right:25px;
-    top:20px;
-    color:#ece9e2;
-    font-size:45px;
-    font-family:"Playfair Display",serif;
-}
-
-.practice-icon{
-    width:55px;
-    height:55px;
-    background:var(--navy);
-    color:var(--gold-light);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:23px;
-    margin-bottom:25px;
+    color:var(--gold);
+    font-family:Georgia,serif;
+    font-size:20px;
+    margin-bottom:20px;
 }
 
 .practice-card h3{
-    font-family:"Playfair Display",serif;
-    font-size:25px;
+    font-family:Georgia,serif;
     color:var(--navy);
-    margin-bottom:12px;
+    font-size:25px;
+    margin-bottom:14px;
 }
 
 .practice-card p{
     color:var(--muted);
     font-size:14px;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .practice-card ul{
     list-style:none;
-    display:grid;
-    gap:9px;
 }
 
 .practice-card li{
+    padding:8px 0;
+    border-top:1px solid #eee;
     font-size:13px;
-    color:#4e5662;
-    padding-left:18px;
-    position:relative;
+    color:#46515f;
 }
 
-.practice-card li::before{
-    content:"";
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:var(--gold);
-    position:absolute;
-    left:0;
-    top:9px;
+.practice-card li:before{
+    content:"✓";
+    color:var(--gold);
+    margin-right:9px;
+    font-weight:bold;
 }
 
 /* =========================
@@ -494,54 +510,48 @@ section{
 .why-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:80px;
+    gap:60px;
     align-items:center;
 }
 
-.why .section-head h2{
+.why .section-heading h2{
     color:#fff;
 }
 
-.why .section-head p{
-    color:#b8c0cc;
+.why .section-heading p{
+    color:#bfc8d4;
 }
 
-.reasons{
+.why-list{
     display:grid;
-    gap:24px;
+    gap:18px;
 }
 
-.reason{
+.why-item{
     display:flex;
-    gap:20px;
-    padding-bottom:24px;
-    border-bottom:1px solid rgba(255,255,255,.1);
+    gap:18px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.1);
 }
 
-.reason:last-child{
-    border-bottom:none;
-}
-
-.reason-icon{
-    width:45px;
-    height:45px;
-    flex:0 0 45px;
-    border:1px solid rgba(201,164,92,.5);
-    color:var(--gold-light);
+.why-icon{
+    width:42px;
+    height:42px;
+    flex-shrink:0;
     display:flex;
     align-items:center;
     justify-content:center;
+    border:1px solid var(--gold);
+    color:var(--gold);
 }
 
-.reason h4{
-    font-family:"Playfair Display",serif;
-    font-size:20px;
-    margin-bottom:4px;
+.why-item h4{
+    margin-bottom:5px;
 }
 
-.reason p{
-    color:#aeb7c4;
-    font-size:14px;
+.why-item p{
+    color:#aeb8c6;
+    font-size:13px;
 }
 
 /* =========================
@@ -549,42 +559,44 @@ section{
 ========================= */
 
 .process{
-    background:var(--cream);
+    background:#fff;
 }
 
 .process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:0;
+    gap:20px;
 }
 
 .process-item{
-    padding:30px;
-    border-top:1px solid #d9d5cc;
-    border-right:1px solid #d9d5cc;
-}
-
-.process-item:first-child{
-    border-left:1px solid #d9d5cc;
+    text-align:center;
+    padding:25px 15px;
 }
 
 .process-number{
-    font-family:"Playfair Display",serif;
+    width:55px;
+    height:55px;
+    border:1px solid var(--gold);
     color:var(--gold);
-    font-size:34px;
-    margin-bottom:15px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-family:Georgia,serif;
+    font-size:19px;
 }
 
 .process-item h3{
-    font-family:"Playfair Display",serif;
     color:var(--navy);
+    font-family:Georgia,serif;
     font-size:20px;
     margin-bottom:8px;
 }
 
 .process-item p{
-    font-size:13px;
     color:var(--muted);
+    font-size:13px;
 }
 
 /* =========================
@@ -592,30 +604,31 @@ section{
 ========================= */
 
 .testimonial{
-    background:#fff;
+    background:var(--light);
 }
 
-.testimonial-box{
-    max-width:900px;
+.quote{
+    max-width:820px;
     margin:auto;
     text-align:center;
 }
 
-.quote{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(25px,3vw,38px);
-    line-height:1.45;
-    color:var(--navy);
-    margin-bottom:25px;
-}
-
 .quote-mark{
+    font-family:Georgia,serif;
+    font-size:70px;
     color:var(--gold);
-    font-size:65px;
-    line-height:.5;
+    line-height:.7;
 }
 
-.testimonial-box span{
+.quote p{
+    font-family:Georgia,serif;
+    font-size:25px;
+    line-height:1.5;
+    color:var(--navy);
+    margin:20px 0;
+}
+
+.quote span{
     color:var(--muted);
     font-size:13px;
 }
@@ -625,48 +638,48 @@ section{
 ========================= */
 
 .faq{
-    background:var(--cream);
+    background:#fff;
 }
 
-.faq-grid{
+.faq-wrap{
     max-width:850px;
     margin:auto;
 }
 
 .faq-item{
-    border-bottom:1px solid #d9d5cc;
+    border-bottom:1px solid var(--border);
 }
 
 .faq-question{
     width:100%;
-    background:none;
-    border:none;
     padding:22px 0;
-    text-align:left;
-    font-family:"Playfair Display",serif;
-    font-size:19px;
-    color:var(--navy);
-    cursor:pointer;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    background:none;
+    border:none;
+    text-align:left;
+    font-size:16px;
+    font-weight:bold;
+    color:var(--navy);
+    cursor:pointer;
 }
 
 .faq-question span{
-    font-family:"DM Sans",sans-serif;
-    font-size:25px;
+    font-size:23px;
     color:var(--gold);
+    transition:.3s;
 }
 
 .faq-answer{
     max-height:0;
     overflow:hidden;
-    transition:.3s;
+    transition:max-height .35s ease;
 }
 
 .faq-answer p{
-    padding:0 0 22px;
     color:var(--muted);
+    padding:0 0 20px;
     font-size:14px;
 }
 
@@ -674,251 +687,280 @@ section{
     max-height:200px;
 }
 
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
+
 /* =========================
-   CTA
+   CONSULTATION
 ========================= */
 
-.cta{
-    padding:85px 0;
-    background:
-        linear-gradient(rgba(16,28,50,.94),rgba(16,28,50,.94)),
-        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
+.consultation{
+    background:var(--navy);
     color:#fff;
 }
 
-.cta-grid{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
-}
-
-.cta h2{
-    font-family:"Playfair Display",serif;
-    font-size:clamp(32px,4vw,50px);
-    line-height:1.15;
-    margin-bottom:12px;
-}
-
-.cta p{
-    color:#bfc7d3;
-    max-width:650px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#fff;
-}
-
-.contact-grid{
+.consultation-grid{
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    gap:70px;
-}
-
-.contact-info{
-    display:grid;
-    gap:22px;
-}
-
-.contact-card{
-    display:flex;
-    gap:17px;
-    padding:20px;
-    background:var(--cream);
-}
-
-.contact-icon{
-    width:42px;
-    height:42px;
-    flex:0 0 42px;
-    background:var(--navy);
-    color:var(--gold-light);
-    display:flex;
+    grid-template-columns:.85fr 1.15fr;
+    gap:60px;
     align-items:center;
-    justify-content:center;
 }
 
-.contact-card small{
+.consultation .section-heading h2{
+    color:#fff;
+}
+
+.consultation .section-heading p{
+    color:#b9c3cf;
+}
+
+.contact-details{
+    margin-top:30px;
+    display:grid;
+    gap:15px;
+}
+
+.contact-detail{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+}
+
+.contact-detail strong{
+    color:var(--gold);
     display:block;
+    font-size:12px;
     text-transform:uppercase;
     letter-spacing:1px;
-    color:#9a9da2;
-    font-size:10px;
-    margin-bottom:2px;
 }
 
-.contact-card strong{
-    color:var(--navy);
-    font-size:15px;
+.contact-detail span,
+.contact-detail a{
+    color:#fff;
+    font-size:14px;
+}
+
+.contact-detail a:hover{
+    color:var(--gold);
 }
 
 .form{
-    display:grid;
-    gap:15px;
+    background:#fff;
+    padding:32px;
+    color:var(--text);
+}
+
+.form-title{
+    font-family:Georgia,serif;
+    font-size:27px;
+    color:var(--navy);
+    margin-bottom:7px;
+}
+
+.form-subtitle{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:22px;
 }
 
 .form-row{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:15px;
+    gap:14px;
+    margin-bottom:14px;
 }
 
-input,
-textarea,
-select{
+.form input,
+.form select,
+.form textarea{
     width:100%;
-    border:1px solid var(--border);
-    padding:15px;
-    font-family:inherit;
+    border:1px solid #dfe3e8;
+    padding:14px 15px;
+    font-size:14px;
     outline:none;
     background:#fff;
+    color:#182230;
+    border-radius:2px;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
+.form input:focus,
+.form select:focus,
+.form textarea:focus{
     border-color:var(--gold);
 }
 
-textarea{
-    min-height:140px;
+.form textarea{
+    min-height:130px;
     resize:vertical;
+    margin-bottom:15px;
+}
+
+.form .btn{
+    width:100%;
+}
+
+.form-note{
+    margin-top:12px;
+    color:#7a8492;
+    font-size:11px;
+    line-height:1.5;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    position:relative;
+    background:
+        linear-gradient(rgba(11,23,38,.88),rgba(11,23,38,.92)),
+        url("photo_1.jpeg") center/cover no-repeat;
+    color:#fff;
+    text-align:center;
+}
+
+.cta-inner{
+    max-width:750px;
+    margin:auto;
+}
+
+.cta h2{
+    font-family:Georgia,serif;
+    font-size:clamp(32px,4vw,50px);
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#cbd3dd;
+    margin-bottom:28px;
 }
 
 /* =========================
    FOOTER
 ========================= */
 
-.footer{
-    background:#0b1425;
+footer{
+    background:#070f1b;
     color:#fff;
-    padding:60px 0 25px;
+    padding:55px 0 25px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
-    gap:60px;
-    padding-bottom:45px;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:45px;
+    padding-bottom:35px;
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.footer h3{
-    font-family:"Playfair Display",serif;
-    margin-bottom:18px;
+.footer-brand p{
+    color:#9da9b8;
+    font-size:13px;
+    max-width:380px;
+    margin-top:15px;
 }
 
-.footer p,
-.footer li{
-    color:#9da8b8;
+.footer-title{
+    color:#fff;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.footer-links{
+    display:grid;
+    gap:8px;
+}
+
+.footer-links a{
+    color:#9da9b8;
     font-size:13px;
 }
 
-.footer ul{
-    list-style:none;
-    display:grid;
-    gap:9px;
+.footer-links a:hover{
+    color:var(--gold);
 }
 
-.footer a:hover{
-    color:var(--gold-light);
+.footer-contact{
+    display:grid;
+    gap:8px;
+}
+
+.footer-contact a,
+.footer-contact span{
+    color:#9da9b8;
+    font-size:13px;
+}
+
+.footer-contact a:hover{
+    color:var(--gold);
 }
 
 .copyright{
-    padding-top:22px;
-    border-top:1px solid rgba(255,255,255,.1);
-    color:#758194;
-    font-size:12px;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
+    padding-top:20px;
+    text-align:center;
+    color:#697687;
+    font-size:11px;
 }
 
 /* =========================
-   FLOATING CALL
+   FLOATING WHATSAPP
 ========================= */
 
-.call-button{
+.whatsapp-float{
     position:fixed;
-    right:20px;
-    bottom:20px;
-    width:58px;
-    height:58px;
+    right:22px;
+    bottom:22px;
+    width:56px;
+    height:56px;
+    background:#25D366;
+    color:#fff;
     border-radius:50%;
-    background:var(--gold);
-    color:var(--navy);
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:22px;
-    z-index:999;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    z-index:1000;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
     .nav-links{
-        display:none;
-        position:absolute;
-        top:82px;
-        left:0;
-        width:100%;
-        background:var(--navy);
-        padding:25px;
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .nav-links.show{
-        display:flex;
-    }
-
-    .menu{
-        display:block;
+        gap:16px;
     }
 
     .nav-phone{
         display:none;
     }
 
-    .intro-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .intro-item{
-        border-bottom:1px solid rgba(16,28,50,.15);
-    }
-
     .about-grid,
     .why-grid,
-    .contact-grid{
+    .consultation-grid{
         grid-template-columns:1fr;
-        gap:50px;
+    }
+
+    .about-images{
+        max-width:650px;
+        width:100%;
+        margin:auto;
     }
 
     .practice-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .process-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .process-item{
-        border-bottom:1px solid #d9d5cc;
-    }
-
-    .cta-grid{
-        flex-direction:column;
-        align-items:flex-start;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .footer-grid{
@@ -926,14 +968,61 @@ textarea{
     }
 }
 
-@media(max-width:600px){
+@media(max-width:760px){
 
-    .hero{
-        min-height:700px;
+    section{
+        padding:70px 0;
     }
 
-    .hero-content{
-        padding:70px 0;
+    .navbar{
+        min-height:70px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:var(--navy);
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px 5%;
+        border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-actions{
+        margin-left:auto;
+    }
+
+    .nav-whatsapp{
+        padding:8px 10px;
+        font-size:11px;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .intro-item{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .intro-item:last-child{
+        border-bottom:none;
+    }
+
+    .hero{
+        min-height:90vh;
     }
 
     .hero h1{
@@ -944,42 +1033,101 @@ textarea{
         font-size:16px;
     }
 
-    .hero-trust{
-        gap:20px;
-    }
-
-    .intro-grid,
-    .practice-grid,
-    .process-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .intro-item{
-        border-right:none;
-    }
-
-    section{
-        padding:70px 0;
+    .about-images{
+        min-height:420px;
     }
 
     .about-image-main{
-        min-height:430px;
+        height:360px;
     }
 
-    .experience-card{
-        right:15px;
-        bottom:20px;
+    .about-box{
+        width:200px;
+        padding:22px;
+    }
+
+    .practice-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .form-row{
         grid-template-columns:1fr;
     }
 
-    .copyright{
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:480px){
+
+    .container{
+        width:92%;
+    }
+
+    .logo-text strong{
+        font-size:14px;
+    }
+
+    .logo-text span{
+        font-size:9px;
+    }
+
+    .logo-mark{
+        width:38px;
+        height:38px;
+    }
+
+    .nav-whatsapp{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero-buttons{
         flex-direction:column;
     }
 
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .about-images{
+        min-height:350px;
+    }
+
+    .about-image-main{
+        width:92%;
+        height:300px;
+    }
+
+    .about-box{
+        width:175px;
+        padding:18px;
+    }
+
+    .about-box strong{
+        font-size:34px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form{
+        padding:22px;
+    }
+
+    .whatsapp-float{
+        right:15px;
+        bottom:15px;
+    }
 }
 
 </style>
@@ -987,973 +1135,1198 @@ textarea{
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
-<header class="header">
-    <div class="container nav">
+<header>
 
-        <a href="#home" class="logo">
+<div class="container navbar">
 
-            <div class="logo-mark">ZR</div>
+<a href="#home" class="logo">
 
-            <div class="logo-text">
-                <strong>Zaheer Rizvi</strong>
-                <span>ADVOCATE</span>
-            </div>
+<div class="logo-mark">ZR</div>
 
-        </a>
+<div class="logo-text">
+<strong>ZAHEER RIZVI</strong>
+<span>ADVOCATE</span>
+</div>
 
-        <nav class="nav-links" id="navLinks">
+</a>
 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#practice">Practice Areas</a>
-            <a href="#process">How We Help</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
+<nav class="nav-links" id="navLinks">
 
-        </nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#practice">Practice Areas</a>
+<a href="#why">Why Choose Us</a>
+<a href="#contact">Contact</a>
 
-        <a href="tel:+919335200748" class="nav-phone">
-            +91 93352 00748
-        </a>
+</nav>
 
-        <div class="menu" onclick="toggleMenu()">☰</div>
+<div class="nav-actions">
 
-    </div>
+<a href="tel:+919335200748" class="nav-phone">
+☎ +91 93352 00748
+</a>
+
+<a
+href="https://wa.me/919335200748?text=Hello%20Zaheer%20Rizvi%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation."
+class="nav-whatsapp"
+target="_blank"
+rel="noopener"
+aria-label="Chat with Zaheer Rizvi on WhatsApp"
+>
+<span>◉</span>
+WhatsApp
+</a>
+
+</div>
+
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+☰
+</button>
+
+</div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-    <div class="container">
+<div class="container">
 
-        <div class="hero-content">
+<div class="hero-content">
 
-            <div class="eyebrow">
-                Advocate • Legal Consultant • Court Representation
-            </div>
+<div class="hero-kicker">
+Advocate • Shahjahanpur
+</div>
 
-            <h1>
-                Trusted Legal Guidance.
-                <span>Strong Representation.</span>
-            </h1>
+<h1>
+Defending Rights With
+<span>Integrity & Excellence</span>
+</h1>
 
-            <p>
-                Zaheer Rizvi Advocate provides dedicated legal assistance
-                and representation in Criminal, Civil and Family Law matters,
-                with a focus on practical advice, clear communication and
-                protecting every client's legal rights.
-            </p>
+<p>
+Experienced legal representation focused on protecting your rights,
+understanding your concerns and providing practical legal guidance
+across Criminal, Civil and Family Law matters.
+</p>
 
-            <div class="buttons">
+<div class="hero-buttons">
 
-                <a href="#contact" class="btn btn-primary">
-                    Book a Consultation
-                </a>
+<a href="#contact" class="btn btn-primary">
+Request Consultation
+</a>
 
-                <a href="#practice" class="btn btn-outline">
-                    Explore Practice Areas
-                </a>
+<a
+href="https://wa.me/919335200748?text=Hello%20Zaheer%20Rizvi%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation."
+target="_blank"
+rel="noopener"
+class="btn btn-outline"
+>
+Chat on WhatsApp
+</a>
 
-            </div>
+</div>
 
-            <div class="hero-trust">
+</div>
 
-                <div class="trust-item">
-                    <strong>500+</strong>
-                    <span>Cases Handled</span>
-                </div>
-
-                <div class="trust-item">
-                    <strong>20+</strong>
-                    <span>Years Experience</span>
-                </div>
-
-                <div class="trust-item">
-                    <strong>1000+</strong>
-                    <span>Clients Assisted</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- INTRO STRIP -->
+<!-- =========================
+     INTRO STRIP
+========================= -->
 
 <div class="intro-strip">
 
-    <div class="container intro-grid">
+<div class="container intro-grid">
 
-        <div class="intro-item">
-            <strong>Professional Representation</strong>
-            <span>Focused legal assistance for every matter</span>
-        </div>
+<div class="intro-item">
+<strong>20+</strong>
+<span>Years Experience</span>
+</div>
 
-        <div class="intro-item">
-            <strong>Confidential</strong>
-            <span>Your information remains private</span>
-        </div>
+<div class="intro-item">
+<strong>500+</strong>
+<span>Cases Handled</span>
+</div>
 
-        <div class="intro-item">
-            <strong>Transparent</strong>
-            <span>Clear communication and fees</span>
-        </div>
+<div class="intro-item">
+<strong>1000+</strong>
+<span>Clients Assisted</span>
+</div>
 
-        <div class="intro-item">
-            <strong>Client Focused</strong>
-            <span>Practical and personalised guidance</span>
-        </div>
-
-    </div>
+</div>
 
 </div>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="about" id="about">
 
-    <div class="container about-grid">
+<div class="container about-grid">
 
-        <div class="about-image">
+<div class="about-images">
 
-            <div class="about-image-main"></div>
+<div class="about-image-main"></div>
 
-            <div class="experience-card">
-                <strong>20+</strong>
-                <span>Years of Legal Experience</span>
-            </div>
+<div class="about-box">
 
-        </div>
+<strong>20+</strong>
+
+<span>
+Years of Legal Experience
+</span>
+
+</div>
+
+</div>
 
 
-        <div class="about-content">
+<div class="about-content">
 
-            <div class="section-label">About the Advocate</div>
+<div class="section-heading">
 
-            <h2 class="section-head" style="margin-bottom:20px;">
-                Experienced Counsel. Personal Attention.
-            </h2>
+<div class="eyebrow">
+About the Advocate
+</div>
 
-            <h3>
-                Zaheer Rizvi, Advocate
-            </h3>
+<h2>
+Dedicated Legal Representation With A Personal Approach
+</h2>
 
-            <p>
-                Legal matters can be stressful and complicated. The right
-                legal guidance can help you understand your options and
-                make informed decisions.
-            </p>
+</div>
 
-            <p>
-                Zaheer Rizvi Advocate represents clients across a range of
-                Criminal, Civil and Family Law matters, providing practical
-                legal guidance and committed courtroom representation.
-            </p>
+<h3>
+Zaheer Rizvi, Advocate
+</h3>
 
-            <ul class="about-list">
+<p>
+With extensive experience in legal practice, Zaheer Rizvi provides
+professional legal assistance and representation with a strong focus
+on understanding each client's individual circumstances.
+</p>
 
-                <li>Dedicated consultation and case assessment</li>
-                <li>Clear explanation of legal options</li>
-                <li>Representation before the appropriate courts</li>
-                <li>Confidential handling of client information</li>
-                <li>Professional and client-focused approach</li>
+<p>
+The approach is straightforward: understand the facts, explain the
+available legal options clearly and work towards a practical and
+effective legal strategy.
+</p>
 
-            </ul>
+<p>
+Whether you require assistance in a criminal matter, civil dispute,
+property issue or family-related legal matter, every case receives
+individual attention and professional representation.
+</p>
 
-            <a href="#contact" class="btn btn-primary">
-                Schedule a Consultation
-            </a>
+<div class="signature">
 
-        </div>
+<strong>Zaheer Rizvi</strong>
 
-    </div>
+<span>Advocate</span>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- PRACTICE AREAS -->
+<!-- =========================
+     PRACTICE AREAS
+========================= -->
 
 <section class="practice" id="practice">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
+<div class="section-heading center">
 
-            <div class="section-label">Areas of Practice</div>
+<div class="eyebrow">
+Areas of Practice
+</div>
 
-            <h2>
-                Legal Expertise Built Around Your Needs
-            </h2>
+<h2>
+Legal Services
+</h2>
 
-            <p>
-                Whether you are dealing with a criminal matter, a civil
-                dispute or a family-related legal issue, get professional
-                guidance tailored to the circumstances of your case.
-            </p>
+<p>
+Professional legal assistance across key areas of law.
+</p>
 
-        </div>
-
-
-        <div class="practice-grid">
+</div>
 
 
-            <!-- Criminal -->
-
-            <article class="practice-card">
-
-                <div class="practice-number">01</div>
-
-                <div class="practice-icon">⚖</div>
-
-                <h3>Criminal Law</h3>
-
-                <p>
-                    Legal assistance and representation in criminal
-                    proceedings from initial advice through trial and appeal.
-                </p>
-
-                <ul>
-                    <li>Bail & Anticipatory Bail</li>
-                    <li>FIR Related Matters</li>
-                    <li>Criminal Trials</li>
-                    <li>Criminal Appeals</li>
-                    <li>Police & Investigation Matters</li>
-                    <li>NDPS Related Matters</li>
-                </ul>
-
-            </article>
+<div class="practice-grid">
 
 
-            <!-- Civil -->
+<!-- Criminal -->
 
-            <article class="practice-card">
+<div class="practice-card">
 
-                <div class="practice-number">02</div>
+<div class="practice-number">
+01
+</div>
 
-                <div class="practice-icon">§</div>
+<h3>
+Criminal Law
+</h3>
 
-                <h3>Civil Litigation</h3>
+<p>
+Legal assistance and representation in criminal matters.
+</p>
 
-                <p>
-                    Representation and legal advice for civil disputes,
-                    property matters and court proceedings.
-                </p>
+<ul>
+<li>Bail Matters</li>
+<li>FIR Related Matters</li>
+<li>Criminal Trials</li>
+<li>Criminal Appeals</li>
+<li>Police & Investigation Matters</li>
+</ul>
 
-                <ul>
-                    <li>Property Disputes</li>
-                    <li>Partition Matters</li>
-                    <li>Injunction Matters</li>
-                    <li>Recovery Matters</li>
-                    <li>Registry Verification</li>
-                    <li>Civil Proceedings</li>
-                </ul>
-
-            </article>
-
-
-            <!-- Family -->
-
-            <article class="practice-card">
-
-                <div class="practice-number">03</div>
-
-                <div class="practice-icon">♧</div>
-
-                <h3>Family Law</h3>
-
-                <p>
-                    Sensitive and practical legal assistance for family
-                    disputes and family court proceedings.
-                </p>
-
-                <ul>
-                    <li>Divorce Matters</li>
-                    <li>Maintenance</li>
-                    <li>Child Custody</li>
-                    <li>Domestic Violence Matters</li>
-                    <li>Matrimonial Disputes</li>
-                    <li>Family Court Proceedings</li>
-                </ul>
-
-            </article>
+</div>
 
 
-        </div>
+<!-- Civil -->
 
-    </div>
+<div class="practice-card">
+
+<div class="practice-number">
+02
+</div>
+
+<h3>
+Civil Law
+</h3>
+
+<p>
+Representation in civil disputes and legal proceedings.
+</p>
+
+<ul>
+<li>Property Disputes</li>
+<li>Injunction Matters</li>
+<li>Recovery Matters</li>
+<li>Civil Proceedings</li>
+<li>Contractual Disputes</li>
+</ul>
+
+</div>
+
+
+<!-- Family -->
+
+<div class="practice-card">
+
+<div class="practice-number">
+03
+</div>
+
+<h3>
+Family Law
+</h3>
+
+<p>
+Legal guidance and representation in family-related matters.
+</p>
+
+<ul>
+<li>Divorce Matters</li>
+<li>Maintenance Matters</li>
+<li>Family Disputes</li>
+<li>Domestic Disputes</li>
+<li>Child Custody Matters</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- WHY CHOOSE -->
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
 
-<section class="why">
+<section class="why" id="why">
 
-    <div class="container why-grid">
+<div class="container why-grid">
 
-        <div>
+<div>
 
-            <div class="section-head">
+<div class="section-heading">
 
-                <div class="section-label">
-                    Why Choose Us
-                </div>
+<div class="eyebrow">
+Why Choose Us
+</div>
 
-                <h2>
-                    A Professional Approach to Every Case
-                </h2>
+<h2>
+Experience, Integrity & Personal Attention
+</h2>
 
-                <p>
-                    Every legal matter deserves attention, preparation
-                    and a clear understanding of the client's objectives.
-                </p>
+<p>
+Legal matters require careful attention, clear communication and
+a strong understanding of the circumstances surrounding each case.
+</p>
 
-            </div>
+</div>
 
-            <a href="#contact" class="btn btn-primary">
-                Talk to an Advocate
-            </a>
+<a href="#contact" class="btn btn-primary">
+Discuss Your Matter
+</a>
 
-        </div>
-
-
-        <div class="reasons">
-
-            <div class="reason">
-
-                <div class="reason-icon">01</div>
-
-                <div>
-                    <h4>Personal Attention</h4>
-                    <p>
-                        Understand your circumstances before recommending
-                        a legal course of action.
-                    </p>
-                </div>
-
-            </div>
+</div>
 
 
-            <div class="reason">
-
-                <div class="reason-icon">02</div>
-
-                <div>
-                    <h4>Clear Legal Guidance</h4>
-                    <p>
-                        Legal options and procedures are explained in
-                        straightforward language.
-                    </p>
-                </div>
-
-            </div>
+<div class="why-list">
 
 
-            <div class="reason">
+<div class="why-item">
 
-                <div class="reason-icon">03</div>
+<div class="why-icon">
+01
+</div>
 
-                <div>
-                    <h4>Prepared Representation</h4>
-                    <p>
-                        Each matter is approached with preparation,
-                        documentation and attention to detail.
-                    </p>
-                </div>
+<div>
 
-            </div>
+<h4>
+Experienced Representation
+</h4>
+
+<p>
+Years of legal practice and experience across different areas of law.
+</p>
+
+</div>
+
+</div>
 
 
-            <div class="reason">
+<div class="why-item">
 
-                <div class="reason-icon">04</div>
+<div class="why-icon">
+02
+</div>
 
-                <div>
-                    <h4>Confidentiality</h4>
-                    <p>
-                        Client information and discussions are handled
-                        with professional confidentiality.
-                    </p>
-                </div>
+<div>
 
-            </div>
+<h4>
+Personal Attention
+</h4>
 
-        </div>
+<p>
+Every client's legal concerns are considered individually.
+</p>
 
-    </div>
+</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-icon">
+03
+</div>
+
+<div>
+
+<h4>
+Clear Legal Guidance
+</h4>
+
+<p>
+Legal options and possible courses of action are explained clearly.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-icon">
+04
+</div>
+
+<div>
+
+<h4>
+Professional Approach
+</h4>
+
+<p>
+Focused, responsible and professional representation for every matter.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESS
+========================= -->
 
-<section class="process" id="process">
+<section class="process">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
+<div class="section-heading center">
 
-            <div class="section-label">
-                Our Approach
-            </div>
+<div class="eyebrow">
+Our Approach
+</div>
 
-            <h2>
-                From Consultation to Representation
-            </h2>
+<h2>
+How We Work
+</h2>
 
-            <p>
-                A simple and transparent process designed to help you
-                understand your legal position and available options.
-            </p>
+<p>
+A simple and transparent approach to understanding and handling your legal matter.
+</p>
 
-        </div>
-
-
-        <div class="process-grid">
-
-            <div class="process-item">
-
-                <div class="process-number">01</div>
-
-                <h3>Initial Consultation</h3>
-
-                <p>
-                    Discuss your matter and provide the relevant facts
-                    and documents.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="process-item">
-
-                <div class="process-number">02</div>
-
-                <h3>Case Assessment</h3>
-
-                <p>
-                    Review the circumstances and identify applicable
-                    legal options.
-                </p>
-
-            </div>
+<div class="process-grid">
 
 
-            <div class="process-item">
+<div class="process-item">
 
-                <div class="process-number">03</div>
+<div class="process-number">
+01
+</div>
 
-                <h3>Legal Strategy</h3>
+<h3>
+Initial Discussion
+</h3>
 
-                <p>
-                    Develop a practical approach based on the nature
-                    and requirements of the matter.
-                </p>
+<p>
+Share the details of your legal concern and relevant circumstances.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="process-item">
+<div class="process-item">
 
-                <div class="process-number">04</div>
+<div class="process-number">
+02
+</div>
 
-                <h3>Representation</h3>
+<h3>
+Understand the Matter
+</h3>
 
-                <p>
-                    Provide legal assistance and representation as
-                    required throughout the proceedings.
-                </p>
+<p>
+The facts and available documents are carefully reviewed.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="process-item">
+
+<div class="process-number">
+03
+</div>
+
+<h3>
+Legal Strategy
+</h3>
+
+<p>
+Possible legal options and the appropriate course of action are discussed.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">
+04
+</div>
+
+<h3>
+Representation
+</h3>
+
+<p>
+Professional legal assistance and representation are provided as required.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- TESTIMONIAL -->
+<!-- =========================
+     TESTIMONIAL
+========================= -->
 
 <section class="testimonial">
 
-    <div class="container">
+<div class="container">
 
-        <div class="testimonial-box">
+<div class="quote">
 
-            <div class="quote-mark">“</div>
+<div class="quote-mark">
+“
+</div>
 
-            <div class="quote">
-                Professional legal guidance begins with listening,
-                understanding the facts and helping clients make
-                informed decisions.
-            </div>
+<p>
+Professional guidance, clear communication and dedicated attention
+can make a meaningful difference when dealing with a legal matter.
+</p>
 
-            <span>
-                — Zaheer Rizvi, Advocate
-            </span>
+<span>
+Client Experience
+</span>
 
-        </div>
+</div>
 
-    </div>
-
-</section>
-
-
-<!-- FAQ -->
-
-<section class="faq" id="faq">
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="section-label">
-                Frequently Asked Questions
-            </div>
-
-            <h2>
-                Common Questions
-            </h2>
-
-            <p>
-                Some common questions clients ask before their first
-                legal consultation.
-            </p>
-
-        </div>
-
-
-        <div class="faq-grid">
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    Do I need a consultation before taking legal action?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-                    <p>
-                        A consultation can help you understand the legal
-                        position, available options and documents that may
-                        be required before proceeding.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    What documents should I bring?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-                    <p>
-                        Bring documents relevant to your matter, such as
-                        notices, agreements, FIR copies, court documents,
-                        identification and previous legal correspondence.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    Are consultations confidential?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-                    <p>
-                        Client discussions and information should be handled
-                        professionally and confidentially, subject to
-                        applicable legal and professional obligations.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-                    How can I schedule an appointment?
-                    <span>+</span>
-                </button>
-
-                <div class="faq-answer">
-                    <p>
-                        Call +91 93352 00748 or use the consultation form
-                        below to get in touch regarding your legal matter.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-heading center">
+
+<div class="eyebrow">
+Frequently Asked Questions
+</div>
+
+<h2>
+Common Questions
+</h2>
+
+</div>
+
+
+<div class="faq-wrap">
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFaq(this)">
+Can I discuss my legal matter before deciding to proceed?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+
+<p>
+Yes. You can contact the office to discuss the basic details of
+your legal concern and understand the possible next steps.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFaq(this)">
+What information should I provide?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+
+<p>
+Provide a brief description of the matter along with relevant dates,
+names of parties involved and any important documents or case details
+available to you.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFaq(this)">
+Do you handle criminal matters?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+
+<p>
+Yes. Legal assistance is available for various criminal law matters,
+including bail, FIR-related matters, trials and appeals.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question" onclick="toggleFaq(this)">
+How can I schedule a consultation?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+
+<p>
+You can call +91 93352 00748, contact through WhatsApp or submit the
+consultation form on this website.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONSULTATION
+========================= -->
+
+<section class="consultation" id="contact">
+
+<div class="container consultation-grid">
+
+
+<div>
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Contact
+</div>
+
+<h2>
+Let's Discuss Your Legal Matter
+</h2>
+
+<p>
+Submit your details through the consultation form or contact the
+office directly for assistance.
+</p>
+
+</div>
+
+
+<div class="contact-details">
+
+
+<div class="contact-detail">
+
+<div>☎</div>
+
+<div>
+
+<strong>Phone</strong>
+
+<a href="tel:+919335200748">
++91 93352 00748
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-detail">
+
+<div>◉</div>
+
+<div>
+
+<strong>WhatsApp</strong>
+
+<a
+href="https://wa.me/919335200748?text=Hello%20Zaheer%20Rizvi%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation."
+target="_blank"
+rel="noopener"
+>
+Chat on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-detail">
+
+<div>✉</div>
+
+<div>
+
+<strong>Email</strong>
+
+<a href="mailto:hasan.amir8@gmail.com">
+hasan.amir8@gmail.com
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-detail">
+
+<div>⌖</div>
+
+<div>
+
+<strong>Location</strong>
+
+<span>
+Shahjahanpur, Uttar Pradesh
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FORM
+========================= -->
+
+<div>
+
+<form
+class="form"
+action="https://formsubmit.co/hasan.amir8@gmail.com"
+method="POST"
+>
+
+<h3 class="form-title">
+Request a Consultation
+</h3>
+
+<p class="form-subtitle">
+Please provide a few details about your legal matter.
+</p>
+
+
+<!-- FormSubmit Settings -->
+
+<input
+type="hidden"
+name="_subject"
+value="New Consultation Request - Zaheer Rizvi Advocate"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+<input
+type="hidden"
+name="_next"
+value="https://hasanamir8.github.io/zaheer-advocate/"
+>
+
+
+<div class="form-row">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+autocomplete="name"
+required
+>
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+autocomplete="tel"
+required
+>
+
+</div>
+
+
+<div class="form-row">
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+autocomplete="email"
+required
+>
+
+<select
+name="practice_area"
+required
+>
+
+<option value="">
+Select Practice Area
+</option>
+
+<option value="Criminal Law">
+Criminal Law
+</option>
+
+<option value="Civil Law">
+Civil Law
+</option>
+
+<option value="Family Law">
+Family Law
+</option>
+
+<option value="Property Matter">
+Property Matter
+</option>
+
+<option value="Other Legal Matter">
+Other Legal Matter
+</option>
+
+</select>
+
+</div>
+
+
+<textarea
+name="message"
+placeholder="Briefly describe your legal matter..."
+required
+></textarea>
+
+
+<button
+class="btn btn-primary"
+type="submit"
+>
+Request Consultation
+</button>
+
+
+<p class="form-note">
+By submitting this form, you agree that the information provided
+may be used to contact you regarding your legal enquiry.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
-    <div class="container cta-grid">
+<div class="container">
 
-        <div>
+<div class="cta-inner">
 
-            <div class="section-label">
-                Need Legal Assistance?
-            </div>
+<div class="eyebrow">
+Need Legal Assistance?
+</div>
 
-            <h2>
-                Let's Discuss Your Legal Matter
-            </h2>
+<h2>
+Speak With An Advocate
+</h2>
 
-            <p>
-                Schedule a consultation to discuss your situation,
-                understand your options and determine the appropriate
-                next steps.
-            </p>
+<p>
+Get in touch to discuss your legal matter and understand your available options.
+</p>
 
-        </div>
+<div class="hero-buttons" style="justify-content:center;">
 
-        <a href="tel:+919335200748" class="btn btn-primary">
-            Call +91 93352 00748
-        </a>
+<a
+href="tel:+919335200748"
+class="btn btn-primary"
+>
+Call +91 93352 00748
+</a>
 
-    </div>
+<a
+href="https://wa.me/919335200748?text=Hello%20Zaheer%20Rizvi%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation."
+target="_blank"
+rel="noopener"
+class="btn btn-outline"
+>
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-<section class="contact" id="contact">
+<footer>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-head">
+<div class="footer-grid">
 
-            <div class="section-label">
-                Contact
-            </div>
 
-            <h2>
-                Schedule a Consultation
-            </h2>
+<div class="footer-brand">
 
-            <p>
-                Share a few details about your legal matter and we can
-                discuss the next steps.
-            </p>
+<a href="#home" class="logo">
 
-        </div>
+<div class="logo-mark">
+ZR
+</div>
 
+<div class="logo-text">
 
-        <div class="contact-grid">
+<strong>
+ZAHEER RIZVI
+</strong>
 
+<span>
+ADVOCATE
+</span>
 
-            <div class="contact-info">
+</div>
 
-                <div class="contact-card">
+</a>
 
-                    <div class="contact-icon">☎</div>
+<p>
+Professional legal assistance and representation with a focus on
+integrity, personal attention and practical legal guidance.
+</p>
 
-                    <div>
-                        <small>Phone</small>
-                        <strong>
-                            <a href="tel:+919335200748">
-                                +91 93352 00748
-                            </a>
-                        </strong>
-                    </div>
+</div>
 
-                </div>
 
+<div>
 
-                <div class="contact-card">
+<div class="footer-title">
+Quick Links
+</div>
 
-                    <div class="contact-icon">⌖</div>
+<div class="footer-links">
 
-                    <div>
-                        <small>Location</small>
-                        <strong>
-                            Shahjahanpur, Uttar Pradesh
-                        </strong>
-                    </div>
+<a href="#home">
+Home
+</a>
 
-                </div>
+<a href="#about">
+About
+</a>
 
+<a href="#practice">
+Practice Areas
+</a>
 
-                <div class="contact-card">
+<a href="#why">
+Why Choose Us
+</a>
 
-                    <div class="contact-icon">⚖</div>
+<a href="#contact">
+Contact
+</a>
 
-                    <div>
-                        <small>Practice</small>
-                        <strong>
-                            Criminal • Civil • Family Law
-                        </strong>
-                    </div>
+</div>
 
-                </div>
+</div>
 
 
-                <div class="contact-card">
+<div>
 
-                    <div class="contact-icon">◷</div>
+<div class="footer-title">
+Contact
+</div>
 
-                    <div>
-                        <small>Consultation</small>
-                        <strong>
-                            By Appointment
-                        </strong>
-                    </div>
+<div class="footer-contact">
 
-                </div>
+<a href="tel:+919335200748">
++91 93352 00748
+</a>
 
-            </div>
+<a href="mailto:hasan.amir8@gmail.com">
+hasan.amir8@gmail.com
+</a>
 
+<a
+href="https://wa.me/919335200748"
+target="_blank"
+rel="noopener"
+>
+WhatsApp
+</a>
 
-            <form class="form" onsubmit="submitForm(event)">
+<span>
+Shahjahanpur, Uttar Pradesh
+</span>
 
-                <div class="form-row">
+</div>
 
-                    <input
-                        type="text"
-                        placeholder="Your Name"
-                        required
-                    >
+</div>
 
-                    <input
-                        type="tel"
-                        placeholder="Phone Number"
-                        required
-                    >
 
-                </div>
+</div>
 
 
-                <div class="form-row">
+<div class="copyright">
 
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                    >
+© <span id="year"></span> Zaheer Rizvi, Advocate. All Rights Reserved.
 
-                    <select required>
+</div>
 
-                        <option value="">
-                            Select Practice Area
-                        </option>
-
-                        <option>
-                            Criminal Law
-                        </option>
-
-                        <option>
-                            Civil Litigation
-                        </option>
-
-                        <option>
-                            Family Law
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <textarea
-                    placeholder="Briefly describe your legal matter..."
-                    required
-                ></textarea>
-
-
-                <button class="btn btn-primary" type="submit">
-                    Request Consultation
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div>
-
-                <h3>Zaheer Rizvi Advocate</h3>
-
-                <p>
-                    Professional legal assistance and representation
-                    in Criminal, Civil and Family Law matters.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>Quick Links</h3>
-
-                <ul>
-
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#practice">Practice Areas</a></li>
-                    <li><a href="#process">Our Approach</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-
-            <div>
-
-                <h3>Practice Areas</h3>
-
-                <ul>
-
-                    <li>Criminal Law</li>
-                    <li>Civil Litigation</li>
-                    <li>Family Law</li>
-                    <li>Legal Consultation</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-
-        <div class="copyright">
-
-            <span>
-                © 2026 Zaheer Rizvi Advocate. All Rights Reserved.
-            </span>
-
-            <span>
-                Shahjahanpur, Uttar Pradesh
-            </span>
-
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
 
-<!-- FLOATING CALL -->
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
 
 <a
-    href="tel:+919335200748"
-    class="call-button"
-    aria-label="Call Zaheer Rizvi"
+href="https://wa.me/919335200748?text=Hello%20Zaheer%20Rizvi%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation."
+class="whatsapp-float"
+target="_blank"
+rel="noopener"
+aria-label="Chat on WhatsApp"
+title="Chat on WhatsApp"
 >
-    ☎
+◉
 </a>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
+
+/* =========================
+   MOBILE MENU
+========================= */
 
 function toggleMenu(){
 
     const nav = document.getElementById("navLinks");
 
-    nav.classList.toggle("show");
+    nav.classList.toggle("active");
 
 }
 
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+/* Close menu after clicking link */
 
-    link.addEventListener("click", () => {
+document.querySelectorAll(".nav-links a").forEach(function(link){
 
-        document
-            .getElementById("navLinks")
-            .classList.remove("show");
+    link.addEventListener("click", function(){
+
+        document.getElementById("navLinks").classList.remove("active");
 
     });
 
 });
 
 
-document.querySelectorAll(".faq-question").forEach(button => {
+/* =========================
+   FAQ
+========================= */
 
-    button.addEventListener("click", () => {
+function toggleFaq(button){
 
-        const item = button.parentElement;
+    const item = button.parentElement;
 
-        document.querySelectorAll(".faq-item").forEach(other => {
+    const allItems = document.querySelectorAll(".faq-item");
 
-            if(other !== item){
+    allItems.forEach(function(otherItem){
 
-                other.classList.remove("active");
+        if(otherItem !== item){
 
-                other
-                    .querySelector(".faq-question span")
-                    .textContent = "+";
+            otherItem.classList.remove("active");
 
-            }
-
-        });
-
-        item.classList.toggle("active");
-
-        const icon = button.querySelector("span");
-
-        icon.textContent =
-            item.classList.contains("active") ? "−" : "+";
+        }
 
     });
 
-});
-
-
-function submitForm(event){
-
-    event.preventDefault();
-
-    alert(
-        "Thank you. Your consultation request has been received. Please call +91 93352 00748 for immediate assistance."
-    );
+    item.classList.toggle("active");
 
 }
+
+
+/* =========================
+   CURRENT YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 </script>
 
